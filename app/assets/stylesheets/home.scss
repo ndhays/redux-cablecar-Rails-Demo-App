@@ -1,0 +1,46 @@
+
+body {
+  font-family: Helvetica;
+  text-align: center;
+}
+h1 {
+  font-size: 16px;
+  margin: 20px auto;
+  padding: 10px;
+}
+p {
+  font-size: 14px;
+  text-align: left;
+  margin: 0 auto;
+  width: 600px;
+}
+.color {
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  height: 40px;
+  width: 60px;
+}
+.color.true {
+  border: 5px solid black;
+}
+#mix {
+  border: 1px solid black;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 100px;
+  padding: 5px 20px;
+}
+input {
+  border: auto;
+  font-size: 16px;
+  margin: 10px auto;
+  padding: 14px;
+  text-align: center;
+  width: 700px;
+}
+input:focus {
+  outline: none;
+}
