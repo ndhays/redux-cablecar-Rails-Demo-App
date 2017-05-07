@@ -1,0 +1,17 @@
+{
+  "name": "javascripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "application.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux-cablecar": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "webpack": "^2.5.0"
+  }
+}
