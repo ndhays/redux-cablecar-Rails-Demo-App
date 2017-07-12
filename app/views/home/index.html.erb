@@ -1,17 +1,9 @@
-<h1>Status:<span id="state"></span></h1>
+<h1>ActionCable Connection Status: <span id="state"></span></h1>
 
-<div class="colors">
-  <% @colors.each do |color| %>
-    <div data-id="<%=color.id%>" class="color <%=color.active%>" style="background: rgba(<%=color.r%>,<%=color.g%>,<%=color.b%>,<%=color.opacity/100.0%>)"></div>
-  <% end %>
-</div>
+<p>All Changes on this page are updated in the database before being displayed. (Non-optimistic).
+<br>Try closing the window and reopening... or open multiple incognito windows at once.
+<br>Press 'c' to change the background color.</p>
 
-<div id="mix">Mix it up</div>
-<hr>
+<canvas id="game" height="550" width="550"></canvas>
 
-<input id="message" value="<%= @message.message %>">
-
-<h1 id="msg"></h1>
-
-<p>Changes on this page do not occur until the database is updated.
-<br>Try closing the window and reopening... or multiple windows at once.</p>
+<p id="action"></p>
