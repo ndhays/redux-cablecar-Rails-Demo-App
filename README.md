@@ -3,7 +3,8 @@ This app is a basic demo of [redux-cablecar](https://github.com/ndhays/redux-cab
   
 It uses Webpack to build `bundle.js` and bootstrap node modules into the asset pipeline.  
   
-(Webpack enters at `entry.js` and builds to -> `/app/assets/javascripts/bundle.js`) - see `webpack.config.js` for more details  
+(Webpack enters at `entry.js` and builds to -> `/app/assets/javascripts/bundle.js`)  
+see `webpack.config.js` for more details  
   
 ## Demo
 Use arrow keys to move square around the board.  
