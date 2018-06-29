@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require cable
-//= require bundle
-//= require app
+//= require action_cable
+//= require appBundle
+
+$(function() {
+  if ($('#reactApp').length) ignite();
+});

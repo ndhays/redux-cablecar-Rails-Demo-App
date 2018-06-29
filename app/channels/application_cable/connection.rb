@@ -1,19 +1,19 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
-    identified_by :current_player
- 
+    identified_by :current_user
+
     def connect
-      self.current_player = find_verified_user
+      sleep 3
+      self.current_user = get_current_user
     end
- 
+
     private
-      def find_verified_user
-        if found_player = Player.find_by(id: cookies.signed[:player_id])
-          found_player
+      def get_current_user
+        # Check if name is already used
+        if cookies.signed[:name]
+          cookies.signed[:name]
         else
-          new_player = Player.create(color: "rgb(#{rand(255)},#{rand(255)},#{rand(255)})")
-          cookies.signed[:player_id] = new_player.id
-          new_player
+          reject_unauthorized_connection
         end
       end
   end
