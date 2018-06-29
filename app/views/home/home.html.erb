@@ -1,0 +1,11 @@
+
+<div id="home">
+
+  <h3>Welcome to Rails!</h3>
+
+  <%= form_tag login_path do %>
+    <%= text_field_tag 'name', nil, placeholder: "Name", minlength: 1, required: true, autofocus: true %>
+    <%= submit_tag 'Join' %>
+  <% end %>
+
+</div>
