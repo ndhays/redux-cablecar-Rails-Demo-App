@@ -22,7 +22,8 @@ var store = createStore(reducers, applyMiddleware(cablecar, cheapLogger));
 window.ignite = function() {
 
   // Connect cablecar to the store
-  cablecar.connect(store, 'MainChannel', {
+  const car = cablecar.connect(store, 'MainChannel', {
+    prefix: '',
     connected: function() { store.dispatch({ type: "GET_RECENT_MSGS" }); } // connected callback
   });
 
@@ -31,7 +32,7 @@ window.ignite = function() {
   render(
     <MuiThemeProvider>
       <Provider store={store}>
-        <App />
+        <App cablecar={car} />
       </Provider>
     </MuiThemeProvider>,
     document.getElementById('reactApp')
