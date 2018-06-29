@@ -59,11 +59,17 @@ class App extends React.Component {
 
         <Paper style={{ margin: '2em', padding: '1em', position: 'relative' }} zDepth={4}>
           { this.props.connected ? (
-            <RaisedButton
-              label={ this.state.showTimes ? "Hide Timestamps" : "Show Timestamps" }
-              onClick={ () => this.setState({ showTimes: !this.state.showTimes })}
-              style={{ position: 'absolute', top: '1em', left: '1em' }}
-              />
+            <div style={{ position: 'absolute', top: '1em', left: '1em' }}>
+              <RaisedButton
+                label={ this.state.showTimes ? "Hide Timestamps" : "Show Timestamps" }
+                onClick={ () => this.setState({ showTimes: !this.state.showTimes })}
+                />
+
+              <RaisedButton
+                label={ "Delete All Messages" }
+                onClick={ () => this.props.cablecar.perform('clear_all_messages') }
+                />
+            </div>
           ) : null }
 
           <div style={{ height: '15em', overflow: 'scroll' }}>
