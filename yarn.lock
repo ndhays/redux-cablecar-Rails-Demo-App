@@ -20,6 +20,10 @@ acorn@^5.0.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.1.tgz#317ac7821826c22c702d66189ab8359675f135d7"
 
+actioncable@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/actioncable/-/actioncable-5.2.0.tgz#97a4e06681c749a8af86e1ead8487bf5e87b59e4"
+
 ajv-keywords@^1.1.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.5.1.tgz#314dd0a4b3368fad3dfcdc54ede6171b886daf3c"
@@ -2158,10 +2162,11 @@ recompose@^0.26.0:
     hoist-non-react-statics "^2.3.1"
     symbol-observable "^1.0.4"
 
-redux-cablecar@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/redux-cablecar/-/redux-cablecar-2.0.3.tgz#7bb04c2ac124c5c9cd21d4b30db8aa5e07653937"
+redux-cablecar@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/redux-cablecar/-/redux-cablecar-3.0.1.tgz#fb122edddae6b7382f38a02effd3c7cc16ee12c2"
   dependencies:
+    actioncable "^5.2.0"
     redux "^3.6.0"
 
 redux@^3.6.0:
