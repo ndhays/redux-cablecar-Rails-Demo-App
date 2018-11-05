@@ -49,11 +49,13 @@ class App extends React.Component {
         { !this.props.connected ? (
           <div>
             <LinearProgress mode="indeterminate" />
-            <h3 style={{ color: 'yellow' }}>redux-cablecar Connecting... (React App Here)</h3>
+            <h3>(the React App begins here)</h3>
+            <h3 style={{ color: 'yellow' }}>redux-cablecar Connecting...</h3>
           </div>
         ) : (
           <div>
-            <h3 style={{ color: 'lightgreen' }}>redux-cablecar Connected. (React App Here)</h3>
+            <h3>(the React App begins here)</h3>
+            <h3 style={{ color: 'lightgreen' }}>redux-cablecar Connected. Open multiple private windows to add users to the chat.</h3>
           </div>
         )}
 
