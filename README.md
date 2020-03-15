@@ -11,7 +11,7 @@ See `webpack.config.js` for more details
 
 - `bundle install`  
 - `rails db:create db:migrate`  
-- `yarn`  
+- `npm install`  
 - `webpack`  
 
 ## Run
@@ -19,5 +19,5 @@ See `webpack.config.js` for more details
 
 ## Development
 `webpack --watch`  
-  
+
 MIT
