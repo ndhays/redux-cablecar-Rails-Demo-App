@@ -16,6 +16,6 @@
 //= require action_cable
 //= require appBundle
 
-$(function() {
-  if ($('#reactApp').length) ignite();
-});
+$(function () {
+    if ($('#reactApp').length) ignite()
+})

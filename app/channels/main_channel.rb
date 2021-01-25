@@ -12,12 +12,12 @@ class MainChannel < ApplicationCable::Channel
 
     when "GET_RECENT_MSGS"
       logger.info "CABLECAR ACTION: GET_RECENT_MSGS"
-      broadcast_to_current_user({ type: "RECENT_MSGS", msgs: Message.recent })
+      broadcast_to_current_user({ type: "RECENT_MSGS", payload: { msgs: Message.recent }})
 
     when "NEW_MSG"
-      logger.info "CABLECAR ACTION: NEW MSG: #{action['msg']}"
-      msg = Message.create(name: current_user, msg: action['msg'])
-      rebroadcast(action.merge(msg.info))
+      logger.info "CABLECAR ACTION: NEW MSG: #{action['payload']['msg']}"
+      msg = Message.create(name: current_user, msg: action['payload']['msg'])
+      rebroadcast({ type: "NEW_MSG" }.merge(msg.info))
     end
   end
 
@@ -30,8 +30,8 @@ class MainChannel < ApplicationCable::Channel
   end
 
   def clear_all_messages
-    Message.where(name: current_user).destroy_all
-    ActionCable.server.broadcast("main", { type: "RECENT_MSGS", msgs: Message.recent })
+    Message.destroy_all
+    ActionCable.server.broadcast("main", { type: "RECENT_MSGS", payload: { msgs: Message.recent }})
   end
 
 end

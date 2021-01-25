@@ -3,7 +3,7 @@ module ApplicationCable
     identified_by :current_user
 
     def connect
-      sleep 3
+      sleep 1
       self.current_user = get_current_user
     end
 

@@ -13,11 +13,13 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
-    "redux-cablecar": "^3.0.8"
+    "redux": "^4.0.5",
+    "redux-cablecar": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.0.0",
+    "eslint": "^7.18.0",
     "webpack": "^2.5.0"
   }
 }

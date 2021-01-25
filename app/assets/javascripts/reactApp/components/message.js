@@ -1,18 +1,18 @@
+import React from 'react'
 
-import React from 'react';
-
-export default class Message extends React.Component {
-  render() {
+export default function Message({ color, msg, showTime }) {
     return (
-      <div style={{ margin: '0.3em' }}>
-        <span style={{ color: this.props.color, fontWeight: 'bold' }}>
-          {this.props.msg.name}
-          { this.props.showTime ? (
-            <span style={{ fontSize: '0.5em', marginLeft: '1em' }}>[{this.props.msg.time}]</span>
-          ) : null }:
-        </span>
-        <span style={{ marginLeft: '0.5em' }}>{this.props.msg.msg}</span>
-      </div>
-    );
-  }
+        <div style={{ margin: '0.3em' }}>
+            <span style={{ color, fontWeight: 'bold' }}>
+                {msg.name}
+                {showTime ? (
+                    <span style={{ fontSize: '0.5em', marginLeft: '1em' }}>
+                        [{msg.time}]
+                    </span>
+                ) : null}
+                :
+            </span>
+            <span style={{ marginLeft: '0.5em' }}>{msg.msg}</span>
+        </div>
+    )
 }
