@@ -1,0 +1,19 @@
+<h3>
+    Hello <%= @name %>, (this is Rails up here.)
+    <span><%= link_to "Leave", logout_path %></span>
+</h3>
+
+<div id="reactApp"></div>
+
+<hr>
+
+<h2>(back to Rails down here)</h2>
+
+<ul>
+    <li>Messages are stored in the Rails db before becoming visible</li>
+    <li>Timestamps are from Postgres db entries</li>
+    <li>See <b>main_channel.rb</b> for server side logic</li>
+    <li>The React App is located in <b>assets/javascripts/reactApp</b></li>
+    <li>The React App is compiled via webpack to <b>appBundle.js</b></li>
+    <li>See README for more details</li>
+</ul>
